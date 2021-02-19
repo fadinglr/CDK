@@ -103,11 +103,13 @@ cdk run <script-name> [options]
 |Escaping|docker-runc CVE-2019-5736|runc-pwn|✔||
 |Escaping|containerd-shim CVE-2020-15257|shim-pwn|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-shim-pwn)|
 |Escaping|docker.sock PoC (DIND attack)|docker-sock-check|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-docker-sock-check)|
-|Escaping|docker.sock Backdoor Image Deploy|docker-sock-deploy|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-docker-sock-deploy)|
+|Escaping|docker.sock RCE|docker-sock-pwn|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-docker-sock-pwn)|
+|Escaping|Docker API(2375) RCE|docker-api-pwn|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-docker-api-pwn)|
 |Escaping|Device Mount Escaping|mount-disk|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-mount-disk)|
 |Escaping|Cgroups Escaping|mount-cgroup|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-mount-cgroup)|
 |Escaping|Procfs Escaping|mount-procfs|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-mount-procfs)|
 |Escaping|Ptrace Escaping PoC|check-ptrace|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-check-ptrace)|
+|Escaping|Exploit lxcfs|lxcfs-rw|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-lxcfs-rw)|
 |Escaping|Rewrite Cgroup(devices.allow)|rewrite-cgroup-devices|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-rewrite-cgroup-devices)|
 |Discovery|K8s Component Probe|service-probe|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-service-probe)|
 |Discovery|Dump Istio Sidecar Meta|istio-check|✔|[link](https://github.com/cdk-team/CDK/wiki/Exploit:-check-istio)|
@@ -136,7 +138,7 @@ cdk ps
 |ifconfig|Network Information|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ifconfig)|
 |vi|Edit Files|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-vi)|
 |kcurl|Request to K8s api-server|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-kcurl)|
-|dcurl|Request to Docker HTTP API|||
+|dcurl|Request to Docker HTTP API|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-dcurl)|
 |ucurl|Request to Docker Unix Socket|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ucurl)|
 |rcurl|Request to Docker Registry API|||
 |probe|IP/Port Scanning|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-probe)|
@@ -144,6 +146,38 @@ cdk ps
 ## Developer Docs
 
 * [run test in container.](https://github.com/cdk-team/CDK/wiki/Run-Test)
+
+## Contributing to CDK
+  
+First off, thanks for taking the time to contribute!   
+  
+By reporting any issue, ideas or PRs, your GitHub ID will be listed here.
+
+* https://github.com/cdk-team/CDK/blob/main/thanks.md
+
+#### Bug Reporting
+
+Bugs are tracked as [GitHub Issues](https://github.com/cdk-team/CDK/issues). Create an issue with the current CDK version, error msg and the environment. Describe the exact steps which reproduce the problem.
+
+#### Suggesting Enhancements
+
+Enhancement suggestions are tracked as [GitHub Discussions](https://github.com/cdk-team/CDK/discussions). You can publish any thoughts here to discuss with developers directly.
+
+#### Pull Requests
+
+Fix problems or maintain CDK's quality:
+
+* Describe the current CDK version, environment, problem and exact steps that reproduce the problem.
+* Running screenshots or logs before and after you fix the problem.
+
+New feature or exploits:
+
+* Explain why this enhancement would be useful to other users.
+* Please enable a sustainable environment for us to review contributions.
+* Screenshots about how this new feature works. 
+* If you are committing a new evaluate/exploit scripts, please add a simple doc to your PR message, here is an [example](https://github.com/cdk-team/CDK/wiki/Exploit:-docker-sock-deploy). 
+
+
 
 ## TODO
 
